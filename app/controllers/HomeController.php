@@ -1,6 +1,6 @@
 <?php
 
-class HomeController {
+class HomeController extends Controller {
 
     public function index() {
         // Instancia o modelo
@@ -10,6 +10,6 @@ class HomeController {
         $data = $model->getData();
 
         // Carrega a visão com os dados
-        require_once '../app/views/home.php';
+        $this->render('home', $data);
     }
 }
