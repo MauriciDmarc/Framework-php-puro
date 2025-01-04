@@ -15,10 +15,10 @@ public function getConn(): PDO {
    try{
       $this->conn = new PDO("mysql:host={$this->host};dbname={$this->db_name}", $this->user, $this->pass);
       $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}catch (PDOException $exception){
-   acho "Erro na Conexão: ".$exception->getMessage();
-}
-   return $this->conn
+   }catch (PDOException $exception){
+      echo "Erro na Conexão: ".$exception->getMessage();
    }
-  }
+   
+   return $this->conn;
+   }
 }
