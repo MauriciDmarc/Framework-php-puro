@@ -9,6 +9,6 @@ class Controller {
         extract($data);
 
         // Inclui a view
-        require_once "../app/views/{$view}.PHP";
+        require_once "../app/views/{$view}.php";
     }
 }
